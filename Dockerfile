@@ -1,4 +1,4 @@
-FROM openjdk:8
-EXPOSE 8080
-ADD target/devops-integration.jar devops-integration.jar
-ENTRYPOINT ["java","-jar","/devops-integration.jar"]
+FROM openjdk:11
+EXPOSE 8081
+ADD target/tcare.jar tcare.jar
+ENTRYPOINT ["java","-jar","/tcare.jar"]
