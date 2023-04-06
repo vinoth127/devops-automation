@@ -27,7 +27,7 @@ pipeline {
         stage('Push To Registry') {
             steps {
                 withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                    sh 'docker login -u vinoth -p ${dockerhubpwd}'
+                    sh 'docker login -u Vinoth -p ${dockerhubpwd}'
                     echo "Creating Image with Tag $IMAGE_TAG"
                     sh "docker push $IMAGE_TAG"
                 }
