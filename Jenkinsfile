@@ -36,8 +36,6 @@ pipeline {
     }
     post {
         always {
-            sh "docker rmi ${env.IMAGE_TAG} | true"
-            sh "docker system prune --volumes -f | true"
             sh "docker logout | true"
         }
     }
