@@ -2,8 +2,7 @@ pipeline {
     agent any
     environment {  
    VERSION = '1'
-   BUILD_NUMBER = "${env.BUILD_ID}-${env.GIT_BRANCH.replaceAll('orgin/','')}"
-   IMAGE_TAG = '$VERSION-b$BUILD_NUMBER
+   IMAGE_TAG = '$VERSION
    
     }
         stage('Build'){
@@ -21,7 +20,7 @@ pipeline {
                    sh 'docker login -u vinoth -p ${dockerhubpwd}'
 
 }
-                   sh 'docker push javatechie/tcare'
+                   sh 'docker push vinoth/tcare'
                 }
             }
         }
