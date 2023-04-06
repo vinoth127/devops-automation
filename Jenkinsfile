@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {  
    VERSION = '1'
-   IMAGE_TAG = '$VERSION
+   IMAGE_TAG = '$VERSION'
    
     }
         stage('Build'){
